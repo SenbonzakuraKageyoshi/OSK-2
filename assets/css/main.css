@@ -1,0 +1,29 @@
+@import './vendors/normalize.css';
+@import './vendors/typography.css';
+@import './vendors/vars.css';
+
+@import './components/header.css';
+
+@import './sections/section-top.css';
+
+*{
+    font-family: 'Raleway Regular';
+    font-weight: 400px;
+    color: var(--white);
+}
+
+body{
+    background: var(--black);
+}
+
+.container{
+    max-width: 1480px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
