@@ -5,11 +5,22 @@
 @import './components/header.css';
 
 @import './sections/section-top.css';
+@import './sections/section-advantages.css';
+@import './sections/section-about.css';
+@import './sections/section-catalog.css';
 
 *{
     font-family: 'Raleway Regular';
     font-weight: 400px;
     color: var(--white);
+}
+
+strong{
+    color: inherit;
+}
+
+section:not(.section-top){
+    padding: 85px 0px;
 }
 
 body{
@@ -26,4 +37,43 @@ body{
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
+}
+
+.section-title{
+    color: var(--black);
+    font-family: Raleway;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section-title span{
+    color: var(--green);
+    display: block;
+}
+
+.title-left{
+    text-align: left;
+    position: relative;
+}
+
+.title-left::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 120px;
+    height: 1px;
+    background: var(--green);
+}
+
+@media(max-width: 1200px){
+    section:not(.section-top){
+        padding: 45px 0px;
+    }
+
+    .section-title{
+        font-size: 25px;
+    }
 }
