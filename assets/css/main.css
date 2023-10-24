@@ -8,6 +8,7 @@
 @import './sections/section-advantages.css';
 @import './sections/section-about.css';
 @import './sections/section-catalog.css';
+@import './sections/section-projects.css';
 
 *{
     font-family: 'Raleway Regular';

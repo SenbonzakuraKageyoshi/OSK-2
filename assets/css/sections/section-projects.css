@@ -1,0 +1,148 @@
+.section-projects{
+    background: var(--white);
+}
+
+.section-projects-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-projects-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1236px;
+    margin: 0 auto;
+    margin-top: 55px;
+}
+
+.section-projects-list__item{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 373px;
+}
+
+.section-projects-list{
+    margin-top: -20px;
+}
+
+.section-projects-main__image-wrapper{
+    height: 765px;
+}
+
+.section-projects-main__image-wrapper, .section-projects-list__item{
+    position: relative;
+    cursor: pointer;
+}
+
+.section-projects-main__image-wrapper:hover .section-projects-list__item-info,
+.section-projects-list__item:hover .section-projects-list__item-info{
+    opacity: 1;
+}
+
+.section-projects-list__item-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.50);
+    padding: 10px 10px 20px 10px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.section-projects-list__item-info__name{
+    font-family: 'Raleway Medium';
+    font-size: 20px;
+    line-height: 21px;
+    font-weight: 500;
+}
+
+.section-projects-list__item-info__descr{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.section-projects-list__item-info__date{
+    font-size: 16px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+@media(max-width: 1265px){
+    .section-projects-list img{
+        width: 300px;
+        height: 280px;
+    }
+
+    .section-projects-content{
+        align-items: flex-start;
+    }
+
+    .section-projects-list__item{
+        height: 280px;
+    }
+
+    .section-projects-main__image{
+        height: 580px;
+    }
+
+    .section-projects-main__image-wrapper{
+        height: 580px;
+    }
+}
+
+@media(max-width: 1160px){
+    .section-projects-content{
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .section-projects-main__image{
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .section-projects-main__image-wrapper{
+        height: 300px;
+    }
+
+    .section-projects-list{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: -20px;
+    }
+
+    .section-projects-list img{
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .section-projects-list__item{
+        height: 300px;
+    }
+}
+
+@media(max-width: 600px){
+    .section-projects-list img{
+        width: 320px;
+    }
+
+    .section-projects-list__item{
+        height: 300px;
+    }
+
+    .section-projects-main__image{
+        width: 320px;
+    }
+}
