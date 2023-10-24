@@ -36,7 +36,7 @@
 }
 
 .header-nav{
-    margin-top: 20px;
+    margin-top: 7px;
 }
 
 .header-nav__link{
@@ -89,7 +89,7 @@
     }
 }
 
-@media(max-width: 768px){
+@media(max-width: 820px){
     .header-right{
         background: var(--green);
         width: 100%;
