@@ -24,6 +24,41 @@
     <title itemprop="headline">Технологии Промышленного Сервиса</title>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal-content__header">
+                <div class="modal-content__header-title">Выберите оборудование, ответив на несколько простых вопросов (1 / 4)</div>
+                <button class="modal-content__close">
+                    <img src="./assets/images/svg/close.svg" alt="Закрыть" width="30" height="30">
+                </button>  
+            </div>
+            <div class="modal-content-main">
+                <div class="modal-content__question">Что собираетесь красить?</div>
+                <div class="modal-content-answers">
+                    <div class="modal-content__answer active">
+                        <div></div>
+                        Легковые автомобили
+                    </div>
+                    <div class="modal-content__answer">
+                        <div></div>
+                        Грузовые автомобили
+                    </div>
+                    <div class="modal-content__answer">
+                        <div></div>
+                        Металлоконструкции
+                    </div>
+                    <div class="modal-content__answer">
+                        <div></div>
+                        Другое
+                    </div>
+                </div>
+                <div class="modal-content-nav">
+                    <button class="modal-content-nav__item disabled" disabled>Назад</button>
+                    <button class="modal-content-nav__item">Вперед</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         <section class="section-top">
             <header class="header">
@@ -156,7 +191,7 @@
         <div class="container">
             <h5 class="section-form__title">Не можете опредилиться с выбором? <span>пройдите опрос и узнайте ответ!</span></h5>
             <p class="section-form__descr">Ответьте на несколько вопросов и отправьте заявку нам</p>
-            <a href="" class="section-quiz__link">Пройти опрос</a>
+            <button class="section-quiz__link modal-trigger">Пройти опрос</button>
         </div>
     </section>
     <section class="section-catalog">

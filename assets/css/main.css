@@ -5,6 +5,7 @@
 @import './components/header.css';
 @import './components/form.css';
 @import './components/footer.css';
+@import './components/modal.css';
 
 @import './sections/section-top.css';
 @import './sections/section-advantages.css';
