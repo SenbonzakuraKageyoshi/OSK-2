@@ -60,23 +60,12 @@
 }
 
 .modal-content__answer:not(:first-child){
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .modal-content__answer.active div{
     background: var(--green);
     position: relative;
-}
-
-.modal-content__answer.active div::before{
-    content: '';
-    position: absolute;
-    top: -7px;
-    left: -7px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    border: 2px solid var(--green);
 }
 
 .modal-content__answer div{
@@ -85,6 +74,7 @@
     border-radius: 50%;
     border: 2px solid var(--green);
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .modal-content-answers{
@@ -96,6 +86,7 @@
     height: 40px;
     border-radius: 20px;
     background: var(--green);
+    cursor: pointer;
 }
 
 .modal-content-nav{
