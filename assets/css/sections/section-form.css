@@ -1,0 +1,34 @@
+.section-form{
+    background: url(../../images/png/form.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.section-form__title{
+    font-family: 'Raleway Medium';
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.section-form__title span{
+    display: block;
+}
+
+.section-form__descr{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+@media(max-width: 768px){
+    .section-form__title{
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .section-form__descr{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}

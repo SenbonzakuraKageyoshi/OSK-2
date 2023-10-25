@@ -81,8 +81,8 @@
                     <span>промышленности и транспорта</span>
                 </h1>
                 <div class="section-top-links">
-                    <a class="section-top__link" data-to="section-catalog">Перейти в каталог</a>
-                    <a class="section-top__link form-anchor" data-to="footer">Связаться с нами</a>  
+                    <a class="section-top__link" data-to="section-catalog">Наши возможности</a>
+                    <a class="section-top__link form-anchor" data-to="section-form">Связаться с нами</a>  
                 </div>
             </div>
         </section>
@@ -167,14 +167,14 @@
                         <div class="catalog-list__item__author">WiederCraft</div>
                         <h2 class="catalog-list__item__name">Стандартная окрасочно - сушильная камера</h2>
                         <div class="catalog-list__item__price">16 490 ₽</div>
-                        <a href="" class="catalog-list__item__link">Оставить заявку</a>
+                        <a class="catalog-list__item__link form-anchor" data-to="section-form">Оставить заявку</a>
                     </li>
                     <li class="catalog-list__item">
                         <img loading="lazy" src="./assets/images/png/catalog2.png" alt="Стандартная ОСК" width="247" height="220">
                         <div class="catalog-list__item__author">WiederCraft</div>
                         <h2 class="catalog-list__item__name">Окрасочно - сушильная камера на заказ</h2>
                         <div class="catalog-list__item__price">16 490 ₽</div>
-                        <a href="" class="catalog-list__item__link">Оставить заявку</a>
+                        <a class="catalog-list__item__link form-anchor" data-to="section-form">Оставить заявку</a>
                     </li>
                 </ul>
             </div>
@@ -227,6 +227,17 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
+    <section class="section-form">
+        <div class="container">
+            <h5 class="section-form__title">Остались вопросы? <span>свяжитесь с нами, мы вам поможем!</span></h5>
+            <p class="section-form__descr">Заполните форму и мы свяжемся с Вами в ближайшее время</p>
+            <form action="POST" class="form">
+                <input type="text" class="form-input" placeholder="Ваше имя" name="username" minlength="2" maxlength="20" required>
+                <input type="text" class="form-input" placeholder="Ваш телефон" name="telephone" minlength="11" maxlength="11" required>
+                <button type="submit">Отправить</button>
+            </form>
         </div>
     </section>
     <footer class="footer">

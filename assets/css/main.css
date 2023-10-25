@@ -3,12 +3,14 @@
 @import './vendors/vars.css';
 
 @import './components/header.css';
+@import './components/form.css';
 
 @import './sections/section-top.css';
 @import './sections/section-advantages.css';
 @import './sections/section-about.css';
 @import './sections/section-catalog.css';
 @import './sections/section-projects.css';
+@import './sections/section-form.css';
 
 *{
     font-family: 'Raleway Regular';

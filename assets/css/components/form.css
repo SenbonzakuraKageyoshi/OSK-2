@@ -1,0 +1,72 @@
+.form-input{
+    width: 240px;
+    height: 50px;
+    border: 1px solid rgba(243, 243, 243, 0.70);
+    outline: none;
+    background: transparent;
+    padding-left: 20px;
+    color: #F3F3F3;
+    font-size: 14px;
+    line-height: 135%;
+    transition: border 0.4s;
+}
+
+.form-input:focus{
+    border: 1px solid var(--green);
+}
+
+.form-input:not(:first-child){
+    margin-left: 20px;
+}
+
+.form-input::placeholder{
+    color: #F3F3F3;
+    font-size: 14px;
+    line-height: 135%;
+}
+
+.section-form .form{
+    margin-top: 30px;
+}
+
+.form button{
+    width: 240px;
+    height: 50px;
+    background: var(--green);
+    color: #FFF;
+    font-family: 'Raleway Medium';
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background: var(--white);
+    color: var(--green);
+}
+
+.section-form .form{
+    display: flex;
+}
+
+.section-form .form button{
+    margin-left: 20px;
+}
+
+@media(max-width: 768px){
+    .section-form .form button{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .section-form .form{
+        flex-direction: column;
+    }
+
+    .form-input:not(:first-child){
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    
+}
