@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    const navLinks = document.querySelectorAll('.header-nav__link');
+    const navLinks = document.querySelectorAll('.nav__link');
     const formLinks = document.querySelectorAll('.form-anchor');
     const catalogLink = document.querySelector('.section-top__link');
 
