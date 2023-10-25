@@ -53,39 +53,39 @@ window.addEventListener('DOMContentLoaded', () => {
     modalTitle = document.querySelector('.modal-content__header-title');
 
     let step = 1;
-    console.log(step)
-    const answers = {
+
+    let answers = {
         '1': {
             question: 'Что собираетесь красить?',
             answers: [
-                {name: 'Легковые автомобили', isSelected: true},
-                {name: 'Грузовые автомобили', isSelected: false},
-                {name: 'Металлоконструкции', isSelected: false},
-                {name: 'Другое  ', isSelected: false}
+                {key: '1', name: 'Легковые автомобили', isSelected: true},
+                {key: '1', name: 'Грузовые автомобили', isSelected: false},
+                {key: '1', name: 'Металлоконструкции', isSelected: false},
+                {key: '1', name: 'Другое  ', isSelected: false}
             ]
         },
         '2': {
             question: 'Как планируется установить окрасочную камеру?',
             answers: [
-                {name: 'На ровный пол', isSelected: true},
-                {name: 'На приямок', isSelected: false},
-                {name: 'На металлическое основание', isSelected: false},
+                {key: '2', name: 'На ровный пол', isSelected: true},
+                {key: '2', name: 'На приямок', isSelected: false},
+                {key: '2', name: 'На металлическое основание', isSelected: false},
             ]
         },
         '3': {
             question: 'В каких условиях будет работать камера?',
             answers: [
-                {name: 'Отапливаемое помещение', isSelected: true},
-                {name: 'Неотапливаемое помещение', isSelected: false},
-                {name: 'В условиях улицы', isSelected: false},
+                {key: '3', name: 'Отапливаемое помещение', isSelected: true},
+                {key: '3', name: 'Неотапливаемое помещение', isSelected: false},
+                {key: '3', name: 'В условиях улицы', isSelected: false},
             ]
         },
         '4': {
             question: 'Какой вид топлива планируете использовать?',
             answers: [
-                {name: 'Природный газ', isSelected: true},
-                {name: 'Электроэнергию', isSelected: false},
-                {name: 'Дизельное топливо', isSelected: false},
+                {key: '4', name: 'Природный газ', isSelected: true},
+                {key: '4', name: 'Электроэнергию', isSelected: false},
+                {key: '4', name: 'Дизельное топливо', isSelected: false},
             ]
         }
     };
@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
             ${
             answers[`${step}`].answers.map((el) => (
                 `
-                <div class="modal-content__answer ${el.isSelected && 'active'}">
+                <div data-key="${el.key}" data-name="${el.name}" class="modal-content__answer ${el.isSelected && 'active'}">
                     <div></div>
                     ${el.name}
                 </div> 
@@ -132,6 +132,21 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const onSelectVariantHandler = (key, name) => {
+
+        const reseted = answers[`${key}`].answers.map((el) => {
+            return {...el, isSelected: false}
+        });
+        
+        const idx = reseted.findIndex((el) => el.name === name);
+
+        reseted[idx].isSelected = true
+        
+        answers[`${key}`].answers = reseted;
+        
+        initContent(step);
+    }
+
     const initContent = (stepNumber) => {
         if(stepNumber === 5){
             modalContent.innerHTML =
@@ -140,7 +155,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             modalTitle.innerHTML = 'Мы обязательно перезвоним Вам в ближайший рабочий день'
         }
-
+        console.log(answers[`${stepNumber}`])
         modalContent.innerHTML =
         `
             <div class="modal-content__question">${answers[`${stepNumber}`].question}</div>
@@ -148,10 +163,10 @@ window.addEventListener('DOMContentLoaded', () => {
                     ${
                     answers[`${stepNumber}`].answers.map((el) => (
                         `
-                        <div class="modal-content__answer ${el.isSelected && 'active'}">
+                        <div data-key="${el.key}" data-name="${el.name}" class="modal-content__answer ${el.isSelected && 'active'}">
                             <div></div>
                             ${el.name}
-                        </div> 
+                        </div>  
                         `
                     ))
                     }
@@ -172,6 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         modalTitle.innerHTML = `Выберите оборудование, ответив на несколько простых вопросов (${stepNumber} / 4)`
 
+        document.querySelectorAll('.modal-content__answer').forEach((el) => el.addEventListener('click', () => onSelectVariantHandler(el.getAttribute('data-key'), el.getAttribute('data-name'))))
         document.querySelector('.increment').addEventListener('click', increment)
         document.querySelector('.decrement').addEventListener('click', decrement)
     };
