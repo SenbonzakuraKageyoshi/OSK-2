@@ -12,6 +12,7 @@
 @import './sections/section-catalog.css';
 @import './sections/section-projects.css';
 @import './sections/section-form.css';
+@import './sections/section-quiz.css';
 
 *{
     font-family: 'Raleway Regular';

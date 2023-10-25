@@ -1,0 +1,27 @@
+.section-quiz{
+    background: var(--white);
+}
+
+.section-quiz h5, .section-quiz p, .section-quiz span{
+    color: var(--black);
+}
+
+.section-quiz__link{
+    width: 200px;
+    height: 40px;
+    background-color: var(--green);
+    font-family: 'Raleway Medium';
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: background-color 0.4s;
+}
+
+.section-quiz__link:hover{
+    background-color: var(--black);
+}
